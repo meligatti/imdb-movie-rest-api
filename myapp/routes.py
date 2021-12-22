@@ -1,6 +1,6 @@
-from __main__ import app
+from myapp import app
 
-from models import TopMovie, movie_schema, movies_schema, db
+from myapp.models import TopMovie, movie_schema, movies_schema, db
 from flask import request, jsonify
 
 import pprint

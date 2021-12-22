@@ -1,7 +1,7 @@
 #from typing_extensions import runtime
 import requests
 import pprint
-import models
+import myapp.models as models
 import json
 
 # First, I want to get all the movies from the Top 250 IMDB Movies

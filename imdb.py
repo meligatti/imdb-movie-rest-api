@@ -13,25 +13,26 @@ f = open('top_movies.json')
 movies_list = json.load(f)
 movies_list = movies_list['items']
 
-# Original code to consume Best Movies API
+
 headers = {
     'Accepts': 'application/json'
 } 
 
 params = {
-    'apiKey': 'k_e63z1cmm'
+    'apiKey': 'your_api_key'
 }
 
+# Original code to consume Best Movies API
 """ url_250_movies = 'https://imdb-api.com/en/API/Top250Movies/'
 
 all_movies_response = requests.get(url = url_250_movies, params = params, headers = headers)
 #pprint.pprint(all_movies_response.json())
 
 movies_list = all_movies_response.json().get('items')
-print(len(movies_list)) """
+"""
 
-# Limit the amount of API calls (free users have 100 calls a day)
-lower_limit = 20
+# Limit the amount of API calls (free users have 100 calls a day). The movie 
+lower_limit = 0
 upper_limit = 21
 
 for i in range(lower_limit, upper_limit):

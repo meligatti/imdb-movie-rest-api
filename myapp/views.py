@@ -8,10 +8,6 @@ import pprint
 # Get a single movie by rank
 @app.route('/movie/rank/<int:rank>', methods = ['GET'])
 def get_by_rank(rank):
-    # The get method uses the primary key, so it's not suitable for this
-    # kind of search.
-    #movie = TopMovie.query.get(rank)
-    #return movie_schema.jsonify(movie)
     movie = TopMovie.query.filter(TopMovie.rank == rank)
     result = movies_schema.dump(movie)
     return jsonify(result)
@@ -25,7 +21,7 @@ def get_all_movies():
     return jsonify(result)
 
 # Get all movies by country
-@app.route('/movie/countries/<string:country>', methods = ['GET'])
+@app.route('/movie/country/<string:country>', methods = ['GET'])
 def get_all_movies_by_country(country):
     sel_country_movies = TopMovie.query.filter(TopMovie.countries.like('%' + country + '%'))
     result = movies_schema.dump(sel_country_movies)
@@ -46,7 +42,7 @@ def get_all_movies_by_actor(actor):
     return jsonify(result)
 
 # Get all movies by genre
-@app.route('/movie/genres/<string:genre>', methods = ['GET'])
+@app.route('/movie/genre/<string:genre>', methods = ['GET'])
 def get_all_movies_by_genre(genre):
     sel_genre_movies = TopMovie.query.filter(TopMovie.genres.like('%' + genre + '%'))
     result = movies_schema.dump(sel_genre_movies)

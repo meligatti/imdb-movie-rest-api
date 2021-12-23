@@ -5,7 +5,7 @@ This project implements a REST API to obtain data from the top ranked movies in 
 The created database contains the following data: rank, IMDB id (it can be useful to search any other information required), title, IMDB rating, countries, directors, star actors, runtime, year, and genres. 
 It has the records of the first 20 movies from the Top 250 IMDB Movies.
 
-The information was obtained consuming the IMDB API (https://imdb-api.com/api). 
+The information was obtained consuming the IMDB API (https://imdb-api.com/api). You need to register to get a free API key.
 
 ## Dependencies
 

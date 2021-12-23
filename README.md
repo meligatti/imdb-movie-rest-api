@@ -18,12 +18,17 @@ The other option is to install through pip all the packages listed on requiremen
   - flask: 2.0.2
   - flask-sqlalchemy: 2.5.1
   - flask-marshmallow: 0.14.0
-  - marsmallow-sqlalchemy: 0.26.1
+  - marshmallow-sqlalchemy: 0.26.1
 
 # Testing
 
 The file __"routes.py"__ has the implemented endpoints with its methods. I performed the test requests using Postman, a free software that can be executed on a web browser.
 To do that, you'll have to add a pair key-value in the headers ("Content-Type": application/json) and configure the body of the request as a raw json.
+
+#### Header configuration
+![Header Configuration](https://github.com/meligatti/imdb-movie-rest-api/blob/master/imgs/header.png)
+#### Body configuration
+![Body Configuration](https://github.com/meligatti/imdb-movie-rest-api/blob/master/imgs/body_json.png)
 
 It's important to note that if you want to add some new movies to the database, there is a daily limit of 100 requests to the IMDB API for free users. To automate this process, you can use the script __"imdb.py"__ and change the _upper_limit_ and _lower_limit_ values (0 represents the movie ranked #1 and so on). 
 
